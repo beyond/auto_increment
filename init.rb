@@ -1,7 +1,7 @@
 # Include hook code here
 class ActiveRecord::ConnectionAdapters::SQLiteAdapter
 	def set_auto_increment( table_name, value )
-		execute( "update sqlite_sequence set seq=#{value} where name='#{table_name}';" )
+		execute( "update sqlite_sequence set seq=#{value} where name=#{table_name};" )
 	end
 end
 
