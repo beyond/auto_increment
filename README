@@ -1,7 +1,7 @@
 AutoIncrement
 =============
 This is a plugin for rails of setting DB auto_increment number.
-
+DB auto_increment number is a initial number of id.
 
 Example
 =======
@@ -10,7 +10,12 @@ entry = Entry.create  # entry.id == 1
 Entry.auto_increment = 100
 
 entry = Entry.create  # entry.id == 101
+entry = Entry.create  # entry.id == 102
+entry = Entry.create  # entry.id == 103
 
+Entry.auto_increment = 200
 
+entry = Entry.create  # entry.id == 201
+entry = Entry.create  # entry.id == 202
 
 Copyright (c) 2008 Beyond, released under the MIT license
